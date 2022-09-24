@@ -31,6 +31,7 @@ import (
 // TransactCommitSignature processed incoming Git pushes and transacts the commit signature
 // as returned by GitHub
 func TransactCommitSignature(ctx context.Context, req skill.RequestContext) skill.Status {
+	fmt.Println("Commits are back on the menu boys!")
 	result := req.Event.Context.Subscription.Result[0]
 	commit := util.Decode[OnCommit](result[0])
 	gitCommit, err := getCommit(ctx, req, &commit)

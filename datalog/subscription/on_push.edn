@@ -34,5 +34,4 @@
  (push-tx ?ctx ?commit ?ref)
 
  ;; check repo filter
- [?commit :git.commit/repo ?repo]
- (skill-repo-selected? ?ctx ?repo)]
+ ]
